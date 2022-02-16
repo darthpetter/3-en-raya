@@ -1,5 +1,6 @@
 package com.example.a3enraya
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -57,19 +58,33 @@ class MainActivity : AppCompatActivity() {
         return false
     }
     private fun winnerFounded(){
-        blockButtons()
+        setEnabledButtons(false)
         Toast.makeText(this,"Winner: $player.\uD83C\uDFC6",Toast.LENGTH_SHORT).show()
     }
 
-    private fun blockButtons(){
-        binding.btn1.setEnabled(false)
-        binding.btn2.setEnabled(false)
-        binding.btn3.setEnabled(false)
-        binding.btn4.setEnabled(false)
-        binding.btn5.setEnabled(false)
-        binding.btn6.setEnabled(false)
-        binding.btn7.setEnabled(false)
-        binding.btn8.setEnabled(false)
-        binding.btn9.setEnabled(false)
+    private fun setEnabledButtons(state:Boolean){
+        binding.btn1.setEnabled(state)
+        binding.btn2.setEnabled(state)
+        binding.btn3.setEnabled(state)
+        binding.btn4.setEnabled(state)
+        binding.btn5.setEnabled(state)
+        binding.btn6.setEnabled(state)
+        binding.btn7.setEnabled(state)
+        binding.btn8.setEnabled(state)
+        binding.btn9.setEnabled(state)
+    }
+
+    fun startAgain(view:View){
+        setEnabledButtons(true)
+
+        binding.btn1.setText("")
+        binding.btn2.setText("")
+        binding.btn3.setText("")
+        binding.btn4.setText("")
+        binding.btn5.setText("")
+        binding.btn6.setText("")
+        binding.btn7.setText("")
+        binding.btn8.setText("")
+        binding.btn9.setText("")
     }
 }
