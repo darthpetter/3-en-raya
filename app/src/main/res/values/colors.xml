@@ -12,4 +12,7 @@
     <color name="spanish_red_500">#b33939</color>
     <color name="spanish_purple_400">#40407a</color>
     <color name="spanish_purple_500">#2c2c54</color>
+
+    <color name="neon_green">#A3DA58</color>
+    <color name="yellow">#F7BA2B</color>
 </resources>
